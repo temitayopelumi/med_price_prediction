@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+  </head>
+  <body>
+    <h1>Median Value Prediction</h1>
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+      
+      <p>Average number of rooms per house</p>
+      <input type="number" name="RM">
+      <br>
+
+      <p>Charles River dummy variable</p>
+      <input type="text" name="CHAS">
+      <br>
+
+      <p>Nitric oxides concentration (parts per 10 million)</p>
+      <input type="text" name="LOG_NOX">
+      <br>
+
+      <p>Weighted distances to five Boston employment centres</p>
+      <input type="text" name="LOG_DIS">
+      <br>
+
+      <p> Lower status of the population</p>
+      <input type="text" name="LOG_LSTAT">
+      <br>
+
+      
+      <input type="submit" value='Get Predictions'>
+    </form>
+  </body>
+</html>
